@@ -1,0 +1,385 @@
+$green-color: #46b646
+    
+*, *::after, *::before
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+html
+    scroll-behavior: smooth
+body
+    position: relative
+    font-family: 'Montserrat', sans-serif
+    background-color: #333333
+.line
+    width: 5%
+    height: 0px
+    outline: 1px solid #e6ecee
+    margin: 0 auto
+    transition: width .5s
+
+.green-text
+    color: $green-color
+
+.shadow-bg
+    background-color: rgba(0,0,0,.8)
+
+.wrapper
+    width: 80%
+    max-width: 1920px
+    margin: 0 auto
+
+
+
+.scroll-fix::before
+    display: block
+    margin-top: -62px
+    height: 62px
+    content: ''
+
+.hero-shadow
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,.8)
+        z-index: -10
+
+.visibility
+    visibility: hidden
+
+.jumbotron
+    overflow: hidden
+    margin-bottom: 0
+
+    h2
+        text-transform: capitalize
+        text-align: center
+
+    .underline
+        margin: 0 auto 40px
+        width: 60px
+        height: 3px
+        background-color: $green-color
+
+nav
+    text-transform: capitalize
+    transition: background-color .6s
+
+    a ,i
+        color: white
+        transition: color .3s
+        font-size: 16px
+    
+    i.fa-bars
+        padding: 10px 20px
+    
+    a:hover
+        color: $green-color
+    
+    .active
+        color: $green-color
+    
+    .navbar-nav
+        text-align: center
+
+    .navbar-brand
+        font-size: 20px
+        font-weight: bold
+
+        i
+            margin-right: 10px
+            font-size: 20px
+    .nav-link:hover+.line
+        width: 25%
+
+
+// hero-img
+header
+    overflow: hidden
+    color: white
+    h1
+        text-transform: uppercase
+        font-size: 30px
+        padding: 10px
+    .hero-img
+        position: relative
+        height: 100vh
+        background-image: url("../img/computer-1845880_1280.jpg")
+        background-position: center
+        background-size: cover
+        background-attachment: fixed
+        z-index: 0
+    
+    
+    
+    .hero-text
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        text-align: center
+        height: 100%
+
+        p
+            padding: 10px
+            font-size: 14px
+
+        .btn-outline-light
+            padding: 10px
+            font-size: 14px
+            text-transform: uppercase
+
+    .fa-chevron-down
+        display: none
+
+//main
+
+#aboutus,#aboutus-hero
+    i
+        margin-top: 20px
+        font-size: 30px
+    h3
+        margin-top: 20px
+        text-transform: capitalize
+        font-size: 18px
+    
+    p
+        padding: 0px
+        font-size: 14px
+
+    p~p
+        padding: 10px
+    .aboutus-hover
+        padding: 10px
+        transition: color .3s
+
+    .aboutus-hover:hover
+        color: $green-color
+
+#aboutus-hero
+    color: #ccc
+
+    i
+        margin-top: 10px
+    h3
+        margin-top: 30px
+        font-size: 24px
+    p
+        padding: 0px
+    .jumbotron
+        position: relative
+        background-image: url(../img/technology-2818664_1280.jpg)
+        background-size: cover
+        background-position: center
+        background-attachment: fixed
+        z-index: 0
+
+#portfolio
+    .carousel-item
+        position: relative
+        height: 600px
+
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+    .carousel-caption
+        position: absolute
+        left: 0
+        right: 0
+        padding: 40px 0
+        background-color: rgba(0,0,0,.7)
+
+    .carousel-indicators
+        padding-bottom: 20px
+
+    .card-deck
+        text-align: center
+        p
+            font-size: 14px
+        img
+            height: 60%
+
+
+//prices
+#prices
+
+    .jumbotron
+        background-color: #F9F9F9
+
+
+    .price-wrap
+        max-width: 1920px
+        width: 95%
+        margin: 0 auto
+    .price-box
+        margin: 20px 10px
+        padding: 30px
+        background-color: #fff
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .6)
+        transition: transform .3s
+
+        h3
+            text-transform: uppercase
+            color: $green-color
+
+        span
+            font-weight: bold
+
+        i
+            font-size: 23px
+            padding: 0 5px
+
+        button
+            padding: 10px 20px
+
+        .price
+            font-size: 30px
+            font-weight: bold
+
+    .price-box:hover
+        transform: scale(1.05)
+
+    .price-text
+        margin-top: 30px
+
+        .price-info
+            margin-bottom: 20px
+
+//team
+#team
+    h2
+        color: #ccc
+
+    .jumbotron
+        position: relative
+        background-image: url("../img/conference-room-768441_1920.jpg")
+        background-position: center
+        background-size: cover
+        background-attachment: fixed
+        z-index: 0
+
+        .card
+            transition: transform .3s
+
+            .card-title
+                text-align: center
+                font-weight: bold
+                text-transform: capitalize
+            
+            .card-img-top
+                height: 250px
+                object-fit: cover
+
+            i
+                padding: 10px 20px
+                color: green
+                transition: transform .3s
+
+            i:hover
+                transform: scale(1.2)
+            
+            .row
+                margin-left: 0
+                margin-right: 0
+
+            .card-body
+                height: 150px
+            
+            .card-text
+                font-size: 14px
+
+        .card:hover
+            transform: scale(.95)
+
+//achievements
+#achievements
+    .wrapper
+        .row
+            div
+                padding: 20px 0
+                margin-bottom: 20px
+            i
+                color: white
+                font-size: 48px
+                text-shadow: 0px 0px 5px black
+
+            .number
+                font-size: 22px
+            
+            .number+p
+                text-transform: uppercase
+
+#contact
+    color: white
+    h2
+        font-weight: bold
+
+    .contact-us
+        display: flex
+        align-items: center
+
+        .contact-item
+            margin: 30px 0
+
+            h3
+                margin-bottom: 15px
+                text-transform: capitalize
+                letter-spacing: 2px
+            
+            .social-media
+                font-size: 25px
+                a
+                    color: white
+                    padding: 10px
+                    text-shadow: 0 0 5px black
+                    transition: color .3s
+
+                a:hover
+                    color: $green-color
+    .jumbotron
+        position: relative
+        background-image: url("../img/america-1869214_1920.jpg")
+        background-position: center
+        background-size: cover
+        background-attachment: fixed
+        z-index: 0
+    .underline
+        background-color: #fff
+
+@media screen and ( min-width: 375px)
+    header
+        h1
+            font-size: 36px
+
+        .hero-text
+
+            p,.btn-outline-light
+                font-size: 16px
+
+    nav
+
+        i.fa-bars
+            font-size: 25px
+    .scroll-fix::before
+        height: 71px
+        margin-top: -71px
+
+//footer
+footer
+    background-color: black
+    color: #ffffff
+    p
+        padding: 20px
+        text-align: center
+        margin: 0
+@media screen and ( min-width: 500px)
+    #team
+        .jumbotron
+            .card
+
+                .card-body
+                    height: 120px

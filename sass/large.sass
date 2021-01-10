@@ -1,0 +1,49 @@
+header
+    .fa-chevron-down
+        display: block
+        position: absolute
+        bottom: 10px
+        left: 50%
+        transform: translateX(-50%)
+        padding: 10px
+        font-size: 50px
+        color: rgba(255, 255, 255, 0.363)
+        animation: bounce 2s infinite
+    .fa-chevron-down:hover
+        text-decoration: none
+        color: #03cdff
+.line
+    display: none
+
+
+#aboutus,#aboutus-hero
+    i
+        font-size: 40px
+    h3
+        font-size: 20px
+
+#prices
+    .price-wrap
+        width: 90%
+
+
+@media screen and ( min-width:  1200px)
+    #aboutus,#aboutus-hero
+        h3
+            font-size: 25px
+        p
+            font-size: 16px
+    #team
+        .jumbotron
+            .card
+                .card-text
+                    font-size: 16px
+@media screen and ( min-width:  2000px)
+    #prices
+        .price-wrap
+            width: 70%
+    #team
+        .jumbotron
+            .card
+                .card-text
+                    font-size: 18px

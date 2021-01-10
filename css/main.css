@@ -1,0 +1,498 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #333333;
+}
+
+.line {
+  width: 5%;
+  height: 0px;
+  outline: 1px solid #e6ecee;
+  margin: 0 auto;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+.green-text {
+  color: #46b646;
+}
+
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.scroll-fix::before {
+  display: block;
+  margin-top: -62px;
+  height: 62px;
+  content: '';
+}
+
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -10;
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+.jumbotron {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.jumbotron h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.jumbotron .underline {
+  margin: 0 auto 40px;
+  width: 60px;
+  height: 3px;
+  background-color: #46b646;
+}
+
+nav {
+  text-transform: capitalize;
+  -webkit-transition: background-color .6s;
+  transition: background-color .6s;
+}
+
+nav a, nav i {
+  color: white;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  font-size: 16px;
+}
+
+nav i.fa-bars {
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  color: #46b646;
+}
+
+nav .active {
+  color: #46b646;
+}
+
+nav .navbar-nav {
+  text-align: center;
+}
+
+nav .navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav .navbar-brand i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+nav .nav-link:hover + .line {
+  width: 25%;
+}
+
+header {
+  overflow: hidden;
+  color: white;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 10px;
+}
+
+header .hero-img {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/computer-1845880_1280.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+header .hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+
+header .hero-text p {
+  padding: 10px;
+  font-size: 14px;
+}
+
+header .hero-text .btn-outline-light {
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+header .fa-chevron-down {
+  display: none;
+}
+
+#aboutus i, #aboutus-hero i {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+#aboutus h3, #aboutus-hero h3 {
+  margin-top: 20px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+#aboutus p, #aboutus-hero p {
+  padding: 0px;
+  font-size: 14px;
+}
+
+#aboutus p ~ p, #aboutus-hero p ~ p {
+  padding: 10px;
+}
+
+#aboutus .aboutus-hover, #aboutus-hero .aboutus-hover {
+  padding: 10px;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+#aboutus .aboutus-hover:hover, #aboutus-hero .aboutus-hover:hover {
+  color: #46b646;
+}
+
+#aboutus-hero {
+  color: #ccc;
+}
+
+#aboutus-hero i {
+  margin-top: 10px;
+}
+
+#aboutus-hero h3 {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+#aboutus-hero p {
+  padding: 0px;
+}
+
+#aboutus-hero .jumbotron {
+  position: relative;
+  background-image: url(../img/technology-2818664_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+#portfolio .carousel-item {
+  position: relative;
+  height: 600px;
+}
+
+#portfolio .carousel-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#portfolio .carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#portfolio .carousel-indicators {
+  padding-bottom: 20px;
+}
+
+#portfolio .card-deck {
+  text-align: center;
+}
+
+#portfolio .card-deck p {
+  font-size: 14px;
+}
+
+#portfolio .card-deck img {
+  height: 60%;
+}
+
+#prices .jumbotron {
+  background-color: #F9F9F9;
+}
+
+#prices .price-wrap {
+  max-width: 1920px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#prices .price-box {
+  margin: 20px 10px;
+  padding: 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#prices .price-box h3 {
+  text-transform: uppercase;
+  color: #46b646;
+}
+
+#prices .price-box span {
+  font-weight: bold;
+}
+
+#prices .price-box i {
+  font-size: 23px;
+  padding: 0 5px;
+}
+
+#prices .price-box button {
+  padding: 10px 20px;
+}
+
+#prices .price-box .price {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#prices .price-box:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#prices .price-text {
+  margin-top: 30px;
+}
+
+#prices .price-text .price-info {
+  margin-bottom: 20px;
+}
+
+#team h2 {
+  color: #ccc;
+}
+
+#team .jumbotron {
+  position: relative;
+  background-image: url("../img/conference-room-768441_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+#team .jumbotron .card {
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#team .jumbotron .card .card-title {
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#team .jumbotron .card .card-img-top {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#team .jumbotron .card i {
+  padding: 10px 20px;
+  color: green;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#team .jumbotron .card i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#team .jumbotron .card .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#team .jumbotron .card .card-body {
+  height: 150px;
+}
+
+#team .jumbotron .card .card-text {
+  font-size: 14px;
+}
+
+#team .jumbotron .card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#achievements .wrapper .row div {
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#achievements .wrapper .row i {
+  color: white;
+  font-size: 48px;
+  text-shadow: 0px 0px 5px black;
+}
+
+#achievements .wrapper .row .number {
+  font-size: 22px;
+}
+
+#achievements .wrapper .row .number + p {
+  text-transform: uppercase;
+}
+
+#contact {
+  color: white;
+}
+
+#contact h2 {
+  font-weight: bold;
+}
+
+#contact .contact-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .contact-us .contact-item {
+  margin: 30px 0;
+}
+
+#contact .contact-us .contact-item h3 {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+#contact .contact-us .contact-item .social-media {
+  font-size: 25px;
+}
+
+#contact .contact-us .contact-item .social-media a {
+  color: white;
+  padding: 10px;
+  text-shadow: 0 0 5px black;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+#contact .contact-us .contact-item .social-media a:hover {
+  color: #46b646;
+}
+
+#contact .jumbotron {
+  position: relative;
+  background-image: url("../img/america-1869214_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+#contact .underline {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 375px) {
+  header h1 {
+    font-size: 36px;
+  }
+  header .hero-text p, header .hero-text .btn-outline-light {
+    font-size: 16px;
+  }
+  nav i.fa-bars {
+    font-size: 25px;
+  }
+  .scroll-fix::before {
+    height: 71px;
+    margin-top: -71px;
+  }
+}
+
+footer {
+  background-color: black;
+  color: #ffffff;
+}
+
+footer p {
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (min-width: 500px) {
+  #team .jumbotron .card .card-body {
+    height: 120px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
