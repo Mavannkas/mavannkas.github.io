@@ -1,0 +1,155 @@
+@import './colors';
+@import './components';
+@import './mixins';
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+.burger-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1em;
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    z-index: 1000;
+
+    &:focus{
+        outline: none;
+        border: 1px solid rgba(255,255,255,.5);
+        border-radius: 8px;
+    }
+
+    &:hover{
+        .burger-btn__bars::after,  .burger-btn__bars::before{
+            width: 100%;
+        }
+    }
+
+    &__box{
+        position: relative;
+        width: 40px;
+        height: 30px;
+    }
+
+    &__bars, &__bars::after, &__bars::before{
+        @include burgerBtn;
+    }
+
+    &__bars{
+        width: 100%;
+
+        &::after{
+            top: 13px;
+            width: 60%;
+        }
+
+        &::before{
+            top: 27px;
+            width: 30%;
+            transition-delay: .1s;
+        }
+    }
+}
+
+//header
+
+.header{
+    position: relative;
+    height: 75vh;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: $pure-white;
+    @include heroImages('../img/palma-mobile.jpg');
+    background-attachment: scroll;
+
+    &__heading{
+        font-family: 'Dancing Script', cursive;
+        font-size: 4.8rem;
+        font-weight: 300;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+    }
+
+    &__btn{
+        margin-top: 2em;
+        padding: 0.8em 1.6em;
+        font-size: 1.4rem;
+        background: $pure-white;
+        border: none;
+        border-radius: 8px;
+        color: $dark;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &::before{
+            background-color: $light-white;
+        }
+    }
+}
+
+
+
+
+
+// ========================
+// MEDIA
+// ========================
+
+@media(min-width: 768px){
+    .white-block{
+        height: 50px;
+        width: 45%;
+    }
+
+    .header{
+        &__heading{
+            font-size: 6.6rem;
+        }
+
+        &__text{
+            font-size: 2.2rem;
+        }
+
+        &__btn{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+
+@media(min-width: 992px){
+    .burger-btn{
+        top: 50px;
+        right: 50px;
+    }
+
+    .header{
+        background-image: $blue-gradient, url('../img/palma-desktop.jpg');
+    }
+
+    &__heading{
+        font-size: 10rem;
+    }
+}
