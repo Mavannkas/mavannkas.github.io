@@ -1,0 +1,45 @@
+.scroll-fix::before {
+  height: 80px;
+  margin-top: -80px;
+}
+
+nav .navbar-brand {
+  font-size: 36px;
+}
+
+nav .navbar-brand i {
+  font-size: 36px;
+}
+
+nav a, nav i {
+  font-size: 20px;
+}
+
+nav i.fa-bars {
+  font-size: 30px;
+}
+
+header h1 {
+  font-size: 42px;
+}
+
+header .hero-text p, header .hero-text .btn-outline-light {
+  font-size: 23px;
+}
+
+#prices .price-info {
+  font-size: 23px;
+}
+
+#prices .price-wrap {
+  width: 90%;
+}
+
+#team .jumbotron .card .card-img-top {
+  height: 300px;
+}
+
+#team .jumbotron .card .card-body {
+  height: 150px;
+}
+/*# sourceMappingURL=medium.css.map */
