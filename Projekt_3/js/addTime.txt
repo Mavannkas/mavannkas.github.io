@@ -1,0 +1,56 @@
+// ==UserScript==
+// @name         Add Time Left
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  try to take over the world!
+// @author       MiensnyT
+// @match        https://mmcschool.teachable.com/courses/946749/lectures/*
+// @grant        none
+// ==/UserScript==
+
+const filterItem=(value)=>{
+    const temp=value.querySelector('.status-container');
+    if(value.querySelector(".fa-file-text") || (temp.hasAttribute('aria-label') && temp.getAttribute('aria-label').includes("Completed"))){
+        return false;
+    }else{
+        return true;
+    }
+};
+
+const getTime=(item)=>{
+    item=item.querySelector('.lecture-name').innerText.split("(")[1].slice(0,-1).split(":");
+    return {
+        tempMin:parseInt(item[0]),
+        tempSec:parseInt(item[1])
+    };
+};
+
+const getString=(min,sec)=>{
+    let hour=Math.floor(sec/60);
+    min+=hour;
+    sec-=hour*60;
+    hour=Math.floor(min/60);
+    min-=hour*60;
+    return `${hour}h ${min}m ${sec}s`;
+}
+
+const addStrToTitle=(str)=>{
+    let newPItem=document.createElement('p');
+    newPItem.innerHTML=`Do końca kursu pozostały/o tylko <b>${str}</b>`;
+    document.querySelector("#lecture_heading").appendChild(newPItem);
+}
+
+const main=()=>{
+    let videoItems=Array(...document.querySelectorAll(".item"));
+    videoItems=videoItems.filter(filterItem);
+    let min=0;
+    let sec=0;
+    for (const item of videoItems) {
+        const {tempMin, tempSec} = getTime(item);
+        min+=tempMin;
+        sec+=tempSec;
+    }
+    addStrToTitle(getString(min,sec));
+}
+
+main();
