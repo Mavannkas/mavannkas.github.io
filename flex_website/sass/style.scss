@@ -65,6 +65,49 @@ body{
         }
     }
 }
+// nav
+
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: $blue-gradient-solid;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: .5s cubic-bezier(.65, .05, .36, 1);
+    &--active{
+        transform: translateX(0);
+    }
+    &__item{
+        position: relative;
+        display: block;
+        margin: 0.5em 0;
+        padding: 0.5em 2em;
+        font-size: 2.8rem;
+        color: $pure-white;
+        text-decoration: none;
+
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            transform: scaleY(0);
+            background-color: $pure-white;
+            transition: transform .3s;
+            content: '';
+        }
+
+        &:hover:before{
+            transform: scaleY(1);
+        }
+    }
+}
 
 //header
 
