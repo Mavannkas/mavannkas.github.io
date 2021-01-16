@@ -7,10 +7,20 @@ const main=()=>{
     const toggleNav=function(){
         nav.classList.toggle("nav--active")
     };
+    const handleNavItemsAnimation=()=>{
+            let delayTime=0;
 
-    navBtn.addEventListener('click',toggleNav);
-    
-    navLinks.forEach(a=>a.addEventListener('click',toggleNav))
+            navLinks.forEach(item => {
+                item.classList.toggle('nav-items-animation');
+                item.style.animationDelay=`.${delayTime++}s`;
+            })
+    };
+
+    navBtn.addEventListener('click',()=>{
+        toggleNav();
+        handleNavItemsAnimation();
+    });
+    navLinks.forEach(a=>a.addEventListener('click',toggleNav));
 
 }
 
