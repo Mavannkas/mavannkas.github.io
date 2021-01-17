@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b19284fe65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -35,7 +36,7 @@
         <div class="white-block white-block-left"></div>
     </header>
     <main class="main">
-        <div class="dreams section-padding setion white-section">
+        <div class="dreams section-padding section white-section">
             <div class="wrapper">
                 <h2 class="section-heading">Spełniaj marzenia</h2>
 
@@ -132,10 +133,147 @@
 
             </div>
         </section>
+        <section class="offers section-padding section" id="offers">
+            <div class="white-block white-block-left"></div>
+            <div class="white-block white-block-right"></div>
+            <h2 class="section-heading">Oferty</h2>
+            <div class="wrapper">
+
+                <div class="offers__box">
+
+                    <div class="offers__option">
+                        <img src="./img/offer-1.jpg" alt="Romantyczne śniadanie na plarzy" class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wyjazd z dziećmi</h3>
+                            <p class="offers__option-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt dolorem expedita veritatis ut reprehenderit quis, excepturi vero obcaecati ipsum, soluta voluptatem quas praesentium harum fuga quae. Cupiditate quam corporis ducimus!</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+
+                    <div class="offers__option">
+                        <img src="./img/offer-2.jpg" alt="Wieczorne ognisko nad morzem" class="offers__option-img offers__option-img--right">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wypad z kumplami</h3>
+                            <p class="offers__option-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt dolorem expedita veritatis ut reprehenderit quis, excepturi vero obcaecati ipsum, soluta voluptatem quas praesentium harum fuga quae. Cupiditate quam corporis ducimus!</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+
+                    <div class="offers__option">
+                        <img src="./img/offer-3.jpg" alt="Bawiące się bańkami dzieci" class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wyjazd z dziećmi</h3>
+                            <p class="offers__option-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt dolorem expedita veritatis ut reprehenderit quis, excepturi vero obcaecati ipsum, soluta voluptatem quas praesentium harum fuga quae. Cupiditate quam corporis ducimus!</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
 
 
+                </div>
+
+            </div>
+        </section>
+        <section class="reviews section-padding section white-section" id="reviews">
+            <h2 class="section-heading">Opinie</h2>
+            <div class="wrapper">
+                <div class="reviews__boxes">
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/opinion-1.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sed nemo molestiae in dolore minima aperiam natus, harum sapiente veniam, architecto quam voluptatum consectetur temporibus nam saepe repellat vitae. Sit.</p>
+                            <strong>Anna Nowak</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/opinion-2.jpg" alt="Jan Kowalski">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sed nemo molestiae in dolore minima aperiam natus, harum sapiente veniam, architecto quam voluptatum consectetur temporibus nam saepe repellat vitae. Sit.</p>
+                            <strong>Jan Kowalski</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/opinion-3.jpg" alt="Maria Wiśniewska">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sed nemo molestiae in dolore minima aperiam natus, harum sapiente veniam, architecto quam voluptatum consectetur temporibus nam saepe repellat vitae. Sit.</p>
+                            <strong>Maria Wiśniewska</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section contact section-padding white-section" id="contact">
+            <div class="white-block white-block-left"></div>
+            <div class="white-block white-block-right"></div>
+            <h2 class="section-heading">Kontakt</h2>
+            <div class="wrapper">
+                <form class="contact__form">
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label">Imie i nazwisko</label>
+                        <input type="text" class="contact__form-input" id="name">
+                        <label for="email" class="contact__form-label">Adres e-mail:</label>
+                        <input type="text" class="contact__form-input" id="email">
+                    </div>
+                    <label for="msg" class="contact__form-label">Wiadomość</label>
+                    <textarea id="msg" class="contact__form-textarea"></textarea>
+                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__boxes">
+                <div class="footer__box">
+
+                    <h3 class="footer__box-title"><i class="fas fa-kiwi-bird"></i> TP CO.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam ducimus est. Totam nemo provident aut aspernatur, ex eligendi minima.</p>
+                    <div class="footer__box-social">
+                        <a href="#" class="footer__box-link"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" class="footer__box-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="footer__box-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                    
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title">Wyspy</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-item"><a href="">Wyspa Tiki Taki</a></li>
+                        <li class="footer__box-item"><a href="">Wyspa Taca Toca</a></li>
+                        <li class="footer__box-item"><a href="">Wyspa Nobu</a></li>
+                        <li class="footer__box-item"><a href="">Pozotałe Wyspy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title">O Firmie</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-item"><a href="">O nas</a></li>
+                        <li class="footer__box-item"><a href="">Zarząd</a></li>
+                        <li class="footer__box-item"><a href="">Kariera</a></li>
+                        <li class="footer__box-item"><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Tropical Paradise</p>
+    </footer>
     <script src="./js/main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>   
 </body>
 
 </html>

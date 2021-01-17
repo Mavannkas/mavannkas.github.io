@@ -121,6 +121,12 @@ body{
 .nav-items-animation{
     animation: navItemsAnimation 1s backwards;
 }
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+    background-color: $dark;
+}
 //header
 
 .header{
@@ -316,12 +322,219 @@ body{
     }
 }
 
+//OFFERS
+.offers{
+    position: relative;
+    @include heroImages('../img/hero-sm.jpg');
+    overflow: hidden;
+    
+    .section-heading{
+        color: $pure-white;
+    }
+    
+    &__option{
+        margin: 1em 0;
+        box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+        background-color: $pure-white;
+        overflow: hidden;
+        border-radius: 8px;
+
+        &-img{
+            width: 100%;
+            transition: transform .3s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        &-info{
+            padding: 2em;
+            background-color: $pure-white;
+            z-index: 10;
+        }
+
+        &-heading{
+            margin-bottom: 0.5em;
+            font-size: 2.4rem;
+            font-weight: 300;
+        }
+        
+        &-text{
+            margin-bottom: 0.5em;
+            font-size: 1.3rem;
+            color: $dark;
+        }
+
+        &-btn{
+            margin-top: 1em;
+            padding: 0.8em;
+            width: 100%;
+            color: $pure-white;
+            background-color: $main-color;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &::before{
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+}
+
+//reviews
+
+@media(max-width: 767px){
+    .reviews.section-padding{
+        padding: 6em 0;
+    }
+}
+
+.reviews{
+    &__box{
+        position: relative;
+        margin: 2em;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 3px 3px 10px #2e2e2e2e;
+        transition: transform .3s;
+
+        &:hover{
+            transform: scale(.95);
+        }
+    }
+
+    &__box-img{
+        position: absolute;
+        top: 8%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+
+        img{
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__box-quote{
+        margin-bottom: 1em;
+        font-size: 3rem;
+        color: $main-color;
+    }
+
+    &__box-text{
+        margin: 1em;
+        font-size: 1.4rem;
+        color: $dark;
+    }
+}
+
+//CONTACT
+.contact{
+    position: relative;
+    background-color: $light-white;
+    overflow: hidden;
+
+    .white-block-left{
+        background-color: $dark;
+    }
+
+    &__form,&__form-top{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-label{
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    &__form-input{
+        @include contactForm;
+    }
+
+    &__form-textarea{
+        @include contactForm;
+        resize:vertical ;
+    }
+
+    &__form-btn{
+        align-self: flex-end;
+        padding: 1em;
+        width: 100%;
+        max-width: 300px;
+        color: $pure-white;
+        border: none;
+        border-radius: 8px;
+        background-color: $main-color;
+        cursor: pointer;
+
+        &::before{
+            background-color: $secondary-color;
+        }
+    }
+
+}
+
+//FOOTER
+.footer{
+    color: $pure-white;
+    background-color: $dark;
+
+    .wrapper{
+        padding: 6em 2em 2em;
+    }
+
+    &__box{
+        font-size: 1.4rem;
+    }
+
+    &__box-desktop{
+        display: none;
+    }
+
+    &__box-title{
+        margin-bottom: 1em;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    &__box-social{
+        margin: 2em 0 1em;
+    }
+
+    &__box-link{
+        padding: 0 .3em;
+        font-size: 3.6rem;
+        color: $pure-white;
+        text-decoration: none;
+        transition: color .3s;
+
+        &:first-child{
+            padding-left: 0;
+        }
+        &:hover{
+            color: $light-white;
+        }
+    }
+
+    &__bottom-text{
+        padding: 2em;
+        text-align: center;
+    }
+
+}
+
+
 // ========================
 // MEDIA
 // ========================
 @media(min-width: 576px){
     .dreams{
-
         &__box{
             flex-direction: row;
             justify-content: space-between;
@@ -346,6 +559,40 @@ body{
         &__img{
             margin-bottom: 0;
             max-height: 300px;
+        }
+    }
+
+    .offers{
+        &__option{
+            display: flex;
+            margin: 2em 0;
+            width: 100%;
+
+            &-img{
+                width: 50%;
+                height: auto;
+
+                &--right{
+                    order: 1;
+                }
+            }
+
+            &-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &-heading{
+                margin-bottom: 0.5em;
+                font-size: 3.6rem;
+            }
+
+            &-btn{
+                padding: 1em;
+            }
+
+
         }
     }
 }
@@ -400,6 +647,43 @@ body{
         &__card{
             margin: 1em;
             width: 45%;
+        }
+    }
+
+    .footer{
+        &__boxes{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__box-desktop{
+            display: block;
+        }
+
+        &__box{
+            margin: 0 2em;
+            width: 25%;
+
+            &:first-child{
+                width: 50%;
+            }
+        }
+
+        &__box-title{
+            font-size: 2.4rem;
+        }
+
+        &__box-list{
+            list-style: none;
+        }
+
+        &__box-item{
+            margin-bottom: 1em;
+
+            a{
+                color: $light-white;
+                text-decoration: none;
+            }
         }
     }
 }
@@ -457,6 +741,22 @@ body{
             max-width: 900px;
         }
 
+    }
+
+    .offers{
+        background-image: $blue-gradient, url('../img/offer-hero-lg.jpg');
+
+        &__option{
+
+            &-img{
+                object-fit: cover;
+                height: 310px;
+            }
+
+            &-text{
+                font-size: 1.5rem;
+            }
+        }
     }
 }
 
