@@ -12,14 +12,6 @@ const main=()=>{
 
     window.addEventListener('scroll',addShadow);
 
-        $(document).click(function (event) {
-            var clickover = $(event.target);
-            var _opened = $(".navbar-collapse").hasClass("show");
-            if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-                $(".navbar-toggler").click();
-            }
-        });
-
         $('.team-carousel').slick({
             autoplay: true,
             autoplaySpeed: 3500,
@@ -52,7 +44,14 @@ const main=()=>{
 
 
 
-
+document.addEventListener('DOMContentLoaded',()=>{
+    document.addEventListener('click',ev=>{
+        const navToggler=document.querySelector('.navbar-toggler');
+        if(navToggler && !navToggler.classList.contains('collapsed')){
+            navToggler.click();
+        }
+    });
+})
 
 
 document.addEventListener('DOMContentLoaded', main);
