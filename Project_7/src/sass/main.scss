@@ -27,9 +27,10 @@ html {
 .show {
     transform: translateX(0) !important;
 }
+
 //hamburger 
 .hamburger {
-    margin: 1em 1em 1em auto;
+    margin: 1em 1em 1em 1.5em;
     padding: 1em;
     background-color: #fff;
     border: none;
@@ -42,7 +43,7 @@ html {
 
     &:hover {
         i {
-            color: $light-black;
+            color: $hover-green;
         }
     }
 
@@ -53,6 +54,10 @@ html {
 .nav {
     display: flex;
 
+    ul {
+        list-style: none;
+    }
+    
     &__logo {
         margin: 1em 2em 1em auto;
         padding: 1em;
@@ -83,7 +88,7 @@ html {
             .nav__logo {
                 &-box {
                     i {
-                        color: black;
+                        color: $hover-green;
                     }
                 }
 
@@ -105,9 +110,10 @@ html {
             padding: 1em;
             font-size: 3rem;
             transition: color .3s;
+            cursor: pointer;
 
             &:hover {
-                color: $light-black;
+                color: $hover-green;
             }
         }
 
@@ -151,9 +157,7 @@ html {
 
         }
 
-        ul {
-            list-style: none;
-        }
+
 
         &--mobile {
             position: fixed;

@@ -1,2 +1,35 @@
 @media(min-width: 768px) {
+
+        //nav
+        .nav {
+            &__logo {
+                margin: 1em auto 1em 1em;
+            }
+    
+            &__list {
+                display: flex;
+                height: 100%;
+    
+                &-item {
+                    margin: 0;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+                }
+            }
+    
+            &__desktop {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            &__mobile{
+                display: none;
+            }
+        }
+
 }
