@@ -19,11 +19,6 @@ html {
     margin: 0 auto;
 }
 
-//header
-.header {
-    width: 100%;
-}
-
 .show {
     transform: translateX(0) !important;
 }
@@ -37,7 +32,7 @@ html {
     cursor: pointer;
 
     i {
-        font-size: 4rem;
+        font-size: 3.8rem;
         transition: color .3s;
     }
 
@@ -50,6 +45,46 @@ html {
 
 }
 
+//logo
+.logo {
+    margin: 1em 2em 1em auto;
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+
+    &__box {
+        display: flex;
+        font-size: 3.8rem;
+
+        i {
+            margin-right: .2em;
+            color: $light-black;
+            transition: color .3s;
+        }
+
+    }
+
+    &__text {
+        transition: color .3s;
+    }
+
+    &:hover {
+
+        .logo {
+            &__box {
+                i {
+                    color: $hover-green;
+                }
+            }
+
+            &__text {
+                color: $light-black;
+            }
+        }
+
+    }
+}
+
 //nav
 .nav {
     display: flex;
@@ -57,48 +92,8 @@ html {
     ul {
         list-style: none;
     }
-    
-    &__logo {
-        margin: 1em 2em 1em auto;
-        padding: 1em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: black;
 
-        &-box {
-            display: flex;
-            font-size: 4rem;
 
-            i {
-                margin-right: .2em;
-                color: $light-black;
-                transition: color .3s;
-            }
-
-        }
-
-        &-text {
-            transition: color .3s;
-        }
-
-        &:hover {
-
-            .nav__logo {
-                &-box {
-                    i {
-                        color: $hover-green;
-                    }
-                }
-
-                &-text {
-                    color: $light-black;
-                }
-            }
-
-        }
-    }
 
     &__list {
         position: relative;
@@ -125,7 +120,7 @@ html {
             a {
                 display: block;
                 padding: 1em 2em;
-                font-size: 1.6rem;
+                font-size: 2.2rem;
                 color: black;
                 text-decoration: none;
                 transition: color .5s;
@@ -179,6 +174,109 @@ html {
     &__desktop {
         display: none;
     }
+}
+
+//header
+.header {
+    position: relative;
+    background-image: url('../img/hero-sm.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    &__shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $shadow;
+        z-index: -1;
+    }
+
+    &__text {
+        padding: 14em 3em ;
+        color: white;
+        z-index: 1;
+
+        &-name {
+            margin-bottom: .2em;
+            font-size: 1.6rem;
+            font-weight: normal;
+
+        }
+
+        &-describe {
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+    }
+}
+
+//footer
+
+.footer {
+    background-color: #f5f5f5;
+    &__boxes {
+        display: grid;
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        ;
+        padding: 2em;
+    }
+
+    &__box {
+       text-align: center;
+
+        &-header {
+            margin: 1em 0 1em 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        &-list {
+            margin-bottom: 1em;
+            list-style: none;
+        }
+
+        &-item {
+            margin-bottom: 1em;
+            font-size: 1.6rem;
+            color: $light-black;
+            transition: color .3s;
+            cursor: pointer;
+
+            &:hover {
+                color: $hover-green;
+            }
+        }
+
+        &--one {
+            grid-area: one;
+        }
+
+        &--two {
+            grid-area: two;
+        }
+
+        &--three {
+            grid-area: three;
+        }
+    }
+
+    &__logo {
+        display: none;
+    }
+
+    &__bottom {
+        text-align: center;
+        padding: 2em;
+        font-size: 1.6rem;
+        color: $light-black;
+        border-top: 1px solid $light-black;
+    }
+
 }
 @import './small';
 @import './medium';

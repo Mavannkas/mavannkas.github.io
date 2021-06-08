@@ -1,4 +1,11 @@
 @media(min-width: 576px) {
-
+    .footer {
+        &__boxes {
+            grid-template-areas: 
+            'one two'
+            'three three'
+            ;
+        }
+    }
 
 }

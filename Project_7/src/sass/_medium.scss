@@ -1,35 +1,50 @@
 @media(min-width: 768px) {
 
-        //nav
-        .nav {
-            &__logo {
-                margin: 1em auto 1em 1em;
-            }
-    
-            &__list {
-                display: flex;
-                height: 100%;
-    
-                &-item {
-                    margin: 0;
+    .logo {
+        margin: 1em auto 1em 1em;
+    }
+    //nav
+    .nav {    
+        &__list {
+            display: flex;
+            height: 100%;
 
-                    a {
-                        display: flex;
-                        align-items: center;
-                        height: 100%;
-                    }
+            &-item {
+                margin: 0;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    font-size: 1.6rem;
                 }
-            }
-    
-            &__desktop {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-    
-            &__mobile{
-                display: none;
             }
         }
 
+        &__desktop {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__mobile{
+            display: none;
+        }
+    }
+
+    //header
+    .header {
+
+        &__text {
+            padding: 18em 0 18em 8em;
+
+            &-name {
+                font-size: 1.8rem;
+            }
+
+            &-describe {
+                font-size: 3.2rem;
+            }
+        }
+    }
 }
