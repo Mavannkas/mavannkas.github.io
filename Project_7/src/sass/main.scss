@@ -14,6 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -87,13 +88,17 @@ html {
 
 //nav
 .nav {
-    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+
+    .container {
+        display: flex;
+    }
 
     ul {
         list-style: none;
     }
-
-
 
     &__list {
         position: relative;
@@ -116,14 +121,13 @@ html {
             position: relative;
             text-align: center;
             margin: 1em 2em;
-
             a {
                 display: block;
                 padding: 1em 2em;
                 font-size: 2.2rem;
                 color: black;
                 text-decoration: none;
-                transition: color .5s;
+                transition: color .5s, background-color .5s;
 
                 &::before {
                     position: absolute;

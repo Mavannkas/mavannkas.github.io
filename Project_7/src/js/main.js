@@ -9,3 +9,4 @@ const toggleMobileMenu = () => {
 
 [hamburgerButton, navClose].forEach( el => el.addEventListener('click', toggleMobileMenu));
 actualDate.innerText = (new Date()).getFullYear();
+

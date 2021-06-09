@@ -12,9 +12,9 @@
     <title>Forest</title>
 </head>
 <body>
-    <div class="container">
-
+    
     <nav class="nav">
+        <div class="container">
             <div class="nav__mobile">
             <button class="hamburger" aria-label="hamburger menu">
                 <i class="fas fa-bars"></i>
@@ -27,13 +27,13 @@
 
                 <ul>
                     <li class="nav__list-item"><a href="index.html">Home</a></li>
-                    <li class="nav__list-item"><a href="#aboutus">O nas</a></li>
-                    <li class="nav__list-item"><a href="#offer">Oferta</a></li>
+                    <li class="nav__list-item"><a href="#aboutus" target-anchor="aboutus">O nas</a></li>
+                    <li class="nav__list-item"><a href="#offer" target-anchor="offer">Oferta</a></li>
                     <li class="nav__list-item"><a href="contact.html">Kontakt</a></li>
                 </ul>
-            </div>
-
         </div>
+    </div>
+
 
         <a class="logo" href="index.html">
     <div class="logo__box">
@@ -46,8 +46,8 @@
 
             <ul class="nav__list nav__list--desktop">
                 <li class="nav__list-item"><a href="index.html">Home</a></li>
-                <li class="nav__list-item"><a href="#aboutus">O nas</a></li>
-                <li class="nav__list-item"><a href="#offer">Oferta</a></li>
+                <li class="nav__list-item"><a href="#aboutus" target-anchor="aboutus">O nas</a></li>
+                <li class="nav__list-item"><a href="#offer" target-anchor="offer">Oferta</a></li>
                 <li class="nav__list-item"><a href="contact.html">Kontakt</a></li>
             </ul>
 
@@ -64,7 +64,9 @@
             <p class="header__text-describe">Najpiękniejszy park w Twojej okolicy!</p>
         </div>
     </div>
-</header>    <section style="height: 200px;"></section>
+</header>    <section style="height: 1000px;" id="aboutus"></section>
+    <section style="height: 200px;"></section>
+    <section style="height: 1000px;" id="offer"></section>
     <footer class="footer">
     <div class="container">
         <div class="footer__main">
@@ -109,6 +111,8 @@
     <div class="footer__bottom">
         ©<span id="actual-date"></span> Forest Group Company Ltd.
     </div>
-</footer>    <script src="./dist/js/main.min.js" defer></script>
+</footer>
+    <script src="./dist/js/scroll-spy.min.js" defer></script>
+    <script src="./dist/js/main.min.js" defer></script>
 </body>
 </html>
