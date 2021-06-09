@@ -47,4 +47,28 @@
             }
         }
     }
+
+    //aboutus 
+    .aboutus {    
+        &__main {
+            flex-direction: row;
+        }
+
+        
+        &__photo {
+            width: 50%;
+            margin-bottom: 0;
+            margin-right: 6em;
+            object-fit: cover;
+        }
+
+        &__content{
+            width: 50%;
+        }
+
+        &__header {
+            font-size: 2.4rem;
+        }
+
+    }
 }
