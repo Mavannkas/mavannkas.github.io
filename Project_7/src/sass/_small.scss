@@ -8,4 +8,13 @@
         }
     }
 
+    .banner {
+        padding: 6em 0;
+        background-image: url('../img/info-bg.jpg');
+
+        &__text {
+            font-size: 2.4rem;
+        }
+    }
+
 }

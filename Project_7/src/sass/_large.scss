@@ -44,6 +44,14 @@
             }
         }
     }
+
+    .banner {
+        padding: 10em 0;
+        &__text {
+            padding: 1em 5em;
+            font-size: 4rem;
+        }
+    }
 }
 
 @media(min-width: 1200px) {
