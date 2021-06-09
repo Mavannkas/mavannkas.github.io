@@ -144,6 +144,10 @@ html {
                     transition: transform .5s;
                 }
 
+                p {
+                    z-index: 1;
+                }
+
                 &:hover {
                     color: white;
 
