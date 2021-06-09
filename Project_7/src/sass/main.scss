@@ -175,7 +175,7 @@ html {
             justify-content: center;
             flex-direction: column;
             background-color: #fff;
-            z-index: 2137;
+            // z-index: 2137;
             transition: transform .7s cubic-bezier(0.4, 0, 0.2, 1);
         }
     }
@@ -189,8 +189,9 @@ html {
 .header {
     position: relative;
     background-image: url('../img/hero-sm.jpg');
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: 50% -220px;
     z-index: -1;
 
     &__shadow {
