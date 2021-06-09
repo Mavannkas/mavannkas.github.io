@@ -139,7 +139,7 @@ html {
                     background-color: black;
                     transform: scaleY(0);
                     transform-origin: bottom;
-                    z-index: -1;
+                    z-index: 0;
                     content: '';
                     transition: transform .5s;
                 }
