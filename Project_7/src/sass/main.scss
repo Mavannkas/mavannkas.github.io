@@ -38,7 +38,7 @@ body {
 }
 
 .section-title {
-    margin: 1.5em .5em; 
+    margin: 1.5em .5em .8em; 
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
@@ -335,6 +335,134 @@ a {
 
 }
 
+//offer
+.offer {
+    text-align: center;
+    margin-bottom: 10em;
+
+    &__announcement {
+        margin-bottom: 1.3em;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    &__boxes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2em 2em 1em;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+        max-width: 300px;
+        padding: 2em;
+        margin: 3em;
+        border-radius: 10px;
+        box-shadow: 0px 3px 10px #00000060;
+
+        &-title {
+            margin: .5em 0 .3em;
+            font-size: 2.2rem;
+        }
+
+        &-price {
+            margin-bottom: .6em;
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        &-benefit {
+            font-size: 1.4rem;
+            line-height: 1.6em;
+            color: #909090;
+
+            &::before {
+                margin-right: .8em;
+                font-family: "Font Awesome 5 Free";
+                font-size: 1.2rem;
+                font-weight: 900;
+                content: "\f068";
+            }
+
+            &--include {
+                color: black;
+
+                &::before {
+                    margin-right: .8em;
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                    color: $hover-green;
+                    content: "\f00c";
+                }
+            }
+        }
+
+        &-button {
+            margin: 1.2em 0 1em;
+            padding: .5em 2.5em;
+            font-size: 1.8rem;
+            background-color: #fff;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 3px 10px #00000050;
+            cursor: pointer;
+            transition: background-color .5s, box-shadow .5s ;
+
+            &:hover {
+                background-color: #e0e0e0;
+                box-shadow: 0px 3px 20px #00000050;
+
+            }
+
+            &--primary {
+                background-color: $green;
+                box-shadow: 0px 3px 10px $green;
+
+                &:hover {
+                    background-color: rgb(39, 246, 122);
+                    box-shadow: 0px 3px 20px $green;
+
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #4c8bf5;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #296de2;
+            transform: scaleX(0);
+            transition: transform .3s;
+            content: '';
+        }
+
+        &:hover {
+            color: #296de2;
+
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
 //banner
 .banner {
     position: relative;
@@ -365,6 +493,7 @@ a {
 @media(min-width: 480px) {
     .banner {
         padding: 4em 0;
+        
         &__text {
             padding: 1em 3em;
             font-size: 2rem;

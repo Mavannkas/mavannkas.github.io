@@ -17,4 +17,29 @@
         }
     }
 
+    //offer 
+    .offer {
+    
+        &__box {    
+            &-title {
+                font-size: 3rem;
+            }
+    
+            &-price {
+                font-size: 4rem;
+            }
+    
+            &-benefit {
+                font-size: 1.6rem;
+            }
+    
+            &-button {
+                margin: 1.2em 0 1em;
+                padding: .5em 3.2em;
+                font-size: 2rem;
+            }
+        }
+    
+    }
+
 }

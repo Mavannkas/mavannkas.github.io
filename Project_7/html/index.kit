@@ -12,7 +12,45 @@
     <title>Forest</title>
 </head>
 <body>
+        
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__mobile">
+
+                <button class="hamburger" aria-label="hamburger menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="nav__list nav__list--mobile">
+                    <div class="nav__list-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <ul>
+                        <li class="nav__list-item"><a href="index.html"><p>Home</p></a></li>
+                        <li class="nav__list-item"><a href="#aboutus" target-anchor="aboutus"><p>O nas</p></a></li>
+                        <li class="nav__list-item"><a href="#offer" target-anchor="offer"><p>Oferta</p></a></li>
+                        <li class="nav__list-item"><a href="contact.html"><p>Kontakt</p></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        <!-- @include 'logo.kit' -->
+            <div class="nav__desktop">
+
+                <ul class="nav__list nav__list--desktop">
+                    <li class="nav__list-item"><a href="index.html"><p>Home</p></a></li>
+                    <li class="nav__list-item"><a href="#aboutus" target-anchor="aboutus"><p>O nas</p></a></li>
+                    <li class="nav__list-item"><a href="#offer" target-anchor="offer"><p>Oferta</p></a></li>
+                    <li class="nav__list-item"><a href="contact.html"><p>Kontakt</p></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
     <!-- @include 'header.kit' -->
+
     <section class="aboutus" id="aboutus">
         <h2 class="section-title">o nas</h2>
         <div class="container">
@@ -39,7 +77,57 @@
         </div>
     </section>
 
-    <section style="height: 1000px;" id="offer"></section>
+    <section class="offer" id="offer">
+        <div class="container">
+
+            <h2 class="section-title">Oferta</h2>
+            <p class="offer__announcement">Wybierz jedną z naszych wspaniałych ofert!</p>
+            <div class="offer__boxes">
+                
+                <div class="offer__box">
+                    <div class="offer__box-title">Demo</div>
+                    <div class="offer__box-price">$0</div>
+                    <div class="offer__box-benefits">
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit">opcja poza pakietem</div>
+                        <div class="offer__box-benefit">opcja poza pakietem</div>
+                        <div class="offer__box-benefit">opcja poza pakietem</div>
+                    </div>
+                    <button class="offer__box-button">Wybierz</button>
+                </div>
+                
+                <div class="offer__box">
+                    <div class="offer__box-title">Standard</div>
+                    <div class="offer__box-price">$99</div>
+                    <div class="offer__box-benefits">
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit">opcja poza pakietem</div>
+                        <div class="offer__box-benefit">opcja poza pakietem</div>
+                    </div>
+                    <button class="offer__box-button offer__box-button--primary">Wybierz</button>
+                </div>
+                
+                <div class="offer__box">
+                    <div class="offer__box-title">Premium</div>
+                    <div class="offer__box-price">$299</div>
+                    <div class="offer__box-benefits">
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                        <div class="offer__box-benefit offer__box-benefit--include">opcja w pakiecie</div>
+                    </div>
+                    <button class="offer__box-button">Wybierz</button>
+                </div>
+                
+            </div>
+            <a href="offer.html" class="offer__link">Zobacz nasze inne oferty!</a>
+        </div>
+    </section>
+
     <!-- @include 'footer.kit' -->
 
     <script src="./dist/js/scroll-spy.min.js" defer></script>

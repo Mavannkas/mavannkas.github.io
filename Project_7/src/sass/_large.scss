@@ -1,5 +1,10 @@
 @media(min-width: 992px) {
 
+
+    .section-title {
+        font-size: 4rem;
+    }
+
     .nav {
         &__desktop {
             a {
@@ -50,6 +55,13 @@
         &__text {
             padding: 1em 5em;
             font-size: 4rem;
+        }
+    }
+
+    //offer
+    .offer {
+        &__boxes {
+            flex-direction: row;
         }
     }
 }
