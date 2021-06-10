@@ -252,6 +252,9 @@ a {
     }
 
     &__photo {
+        height: 350px;
+        background-image: url('../img/aboutus-sm.jpg');
+        background-size: cover;
         margin-bottom: 6em;
     }
 
