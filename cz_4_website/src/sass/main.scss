@@ -58,14 +58,14 @@ a {
     border: none;
     cursor: pointer;
 
-    i {
+    svg {
         font-size: 3.5rem;
-        transition: color .3s;
+        transition: stroke .3s;
     }
 
     &:hover {
-        i {
-            color: $hover-green;
+        svg{
+            stroke: $hover-green;
         }
     }
 
