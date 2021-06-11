@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Parki należące do Forest Group są najbardziej przyjaznym miejscem dla rodzin i przyjezdnych!">
-    <script src="https://kit.fontawesome.com/b19284fe65.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/main.min.css">
@@ -35,8 +34,16 @@
                 </div>
 
             </div>
-        <!-- @include 'logo.kit' -->
-            <div class="nav__desktop">
+        <a class="logo" href="index.html">
+    <div class="logo__box">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-christmas-tree" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 3l4 4l-2 1l4 4l-3 1l4 4h-14l4 -4l-3 -1l4 -4l-2 -1z" />
+            <path d="M14 17v3a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-3" />
+          </svg>
+        <p class="logo__text">Forest</p>
+    </div>
+</a>            <div class="nav__desktop">
 
                 <ul class="nav__list nav__list--desktop">
                     <li class="nav__list-item"><a href="index.html"><p>Home</p></a></li>
@@ -49,8 +56,15 @@
         </div>
     </nav>
 
-    <!-- @include 'header.kit' -->
-
+    <header class="header">
+    <div class="shadow"></div>
+    <div class="header__text">
+        <div class="container">
+            <h1 class="header__text-name">Forest Group</h1>
+            <p class="header__text-describe">Najpiękniejszy park w Twojej okolicy!</p>
+        </div>
+    </div>
+</header>
     <section class="aboutus" id="aboutus">
         <h2 class="section-title">o nas</h2>
         <div class="container">
@@ -128,8 +142,55 @@
         </div>
     </section>
 
-    <!-- @include 'footer.kit' -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__main">
+            <div class="footer__logo">
+                <a class="logo" href="index.html">
+    <div class="logo__box">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-christmas-tree" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 3l4 4l-2 1l4 4l-3 1l4 4h-14l4 -4l-3 -1l4 -4l-2 -1z" />
+            <path d="M14 17v3a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-3" />
+          </svg>
+        <p class="logo__text">Forest</p>
+    </div>
+</a>            </div>
+            <div class="footer__boxes">
 
+                <div class="footer__box footer__box--one">
+                    <p class="footer__box-header">O nas</p>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-item">Historia</li>
+                        <li class="footer__box-item">Praktyki</li>
+                        <li class="footer__box-item">Opinie</li>
+                    </ul>
+                </div>
+
+                <div class="footer__box footer__box--two">
+                    <p class="footer__box-header">Nasza firma</p>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-item">Praca</li>
+                        <li class="footer__box-item">Kadry</li>
+                        <li class="footer__box-item">Zarząd</li>
+                    </ul>
+                </div>
+
+                <div class="footer__box footer__box--three">
+                    <p class="footer__box-header">Dokumenty</p>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-item">Wnioski</li>
+                        <li class="footer__box-item">Rezerwacje</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        ©<span id="actual-date"></span> Forest Group Company Ltd.
+    </div>
+</footer>
     <script src="./dist/js/scroll-spy.min.js" defer></script>
     <script src="./dist/js/main.min.js" defer></script>
 </body>

@@ -83,10 +83,10 @@ a {
         display: flex;
         font-size: 3.5rem;
 
-        i {
+        svg {
             margin-right: .2em;
-            color: $light-black;
-            transition: color .3s;
+            stroke: $light-black;
+            transition: stroke .3s;
         }
 
     }
@@ -99,8 +99,8 @@ a {
 
         .logo {
             &__box {
-                i {
-                    color: $hover-green;
+                svg {
+                    stroke: $hover-green;
                 }
             }
 
@@ -382,6 +382,15 @@ a {
             font-weight: bold;
         }
 
+        &--gold {
+            background-color: #FBF3B5;
+            transition: transform .3s, background-color .3s;
+            &:hover {
+                background-color: #faef9a;
+                transform: scale(1.1);
+            }
+        }
+    
         &-benefit {
             font-size: 1.4rem;
             line-height: 1.6em;
@@ -389,10 +398,9 @@ a {
 
             &::before {
                 margin-right: .8em;
-                font-family: "Font Awesome 5 Free";
                 font-size: 1.2rem;
                 font-weight: 900;
-                content: "\f068";
+                content: url("data:image/svg+xml; utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-minus' width='24' height='14' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23585858' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cline x1='5' y1='12' x2='19' y2='12' /%3E%3C/svg%3E");
             }
 
             &--include {
@@ -400,11 +408,9 @@ a {
 
                 &::before {
                     margin-right: .8em;
-                    font-family: "Font Awesome 5 Free";
                     font-size: 1.2rem;
                     font-weight: 900;
-                    color: $hover-green;
-                    content: "\f00c";
+                    content: url("data:image/svg+xml; utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-check' width='24' height='24' viewBox='0 0 24 24' stroke-width='1.5' stroke='%2324ce68' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 12l5 5l10 -10' /%3E%3C/svg%3E");
                 }
             }
         }
@@ -432,6 +438,17 @@ a {
                 &:hover {
                     background-color: rgb(39, 246, 122);
                     box-shadow: 0px 3px 20px $green;
+
+                }
+            }
+
+            &--gold {
+                background-color: #fdec66;
+                box-shadow: 0px 4px 20px rgb(255, 255, 82);
+
+                &:hover {
+                    background-color: #ffe83d;
+                    box-shadow: 0px 3px 30px rgb(255, 255, 82);
 
                 }
             }
@@ -555,7 +572,7 @@ a {
         top: 14px;
         padding: 0 .7em;
         font-size: 1.6rem;
-        color: rgb(124, 124, 124);
+        color: #757575;
         transition: transform .3s, color .3s, background-color .3s;
     }
 
@@ -585,6 +602,19 @@ a {
         width: 100%;
         height: 60vh;
         border: none;
+    }
+}
+
+//compare
+
+.compare {
+    margin-bottom: 8em;
+
+    &__gold, &__normal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
